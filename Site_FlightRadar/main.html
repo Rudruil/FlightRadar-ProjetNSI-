@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Hehehehe</title>
+    </head>
+    <body>
+        <section>
+            <img src="bg.jpg" id="bg">
+            <img src="mountain.png" id="mountain">
+            <img src="plane.png" id="plane">
+            <img src="piste.png" id="piste">
+            <img src="logo.png" id="logo" class="logo">
+            <h2 id="texte">Flight radar</h2>
+            <a href="map.html" id="btn" class="active">Try now</a>
+            <a href="#sec" id="abt">About us</a>
+        </section>
+        <script type="text/javascript">
+            let bg = document.getElementById("bg")
+            let plane = document.getElementById("plane")
+            let mountain = document.getElementById("mountain")
+            let piste = document.getElementById("piste")
+            let text = document.getElementById("texte")
+
+            window.addEventListener('scroll', function(){
+                var value = window.scrollY;
+                bg.style.top = value * 0.5 + 'px';
+                plane.style.left = -value * 0.5 + 'px';
+                mountain.style.top = -value * 0.15 + 'px';
+                piste.style.top = value * 0.15 + 'px';
+                text.style.top = value * 1 + 'px';
+            })
+        </script>
+        <div class="sec" id="sec">
+            <h2>A propos de notre projet</h2>
+            <br>
+            <p>Notre projet a pour objectif de créer une application qui permet d’afficher une carte en tant réel de Chelles et de son trafic aérien. De plus cette application permet de connaître le numéros de vol, et toutes les informations concernant le vol ces dernières contenues dans une base de donnée, créée par le groupe.<br> 
+                <br>
+                Le groupe est composé de 3 personnes entre lesquelles le travail est équitablement répartie. En effet,<br>
+                <br>
+                L’élève 1 doit :<br> 
+                -coder le module logiciel pour décoder le signal radio pour le protocole ADSB<br>
+                -coder le module logiciel pour stocker les information dans la base de donnée<br>
+                -coder le module logiciel pour stocker dans une IHM la carte en temps réel de la position des avions<br>
+                <br>
+                L’élève 2 doit :<br>
+                -coder le module logiciel pour décoder le signal radio ACARS<br>
+                -coder le module logiciel pour stocker les condition climatique dans la base de donnée<br>
+                -coder le module logiciel pour afficher dans l’IHM la trajectoire des avions<br>
+                <br>
+                L’élève 3 doit :<br> 
+                -installer et configurer le serveur web et la base de donné<br>
+                -coder le module logiciel pour calculer la distance entre 2 avions<br>
+                -coder le module logiciel pour produire une alerte sonore et visuel en cas de rapprochement de 2 avions<br>
+                -coder le site web pour afficher sur la carte en temps réel la position des différents avions et des conditions de vol<br>
+		    <br>
+                <br>
+                durant le développement de ce projet, certaines idées de développement nous sont venues à l’esprit.<br>
+                Tout d’abord, de ne pas se limiter à Chelles et d’étendre le logiciel à la France et pourquoi pas au monde entier. L’objectif serait à terme de pouvoir choisir le vol dont on veut les informations peut importes où il se trouve dans le monde.</p><br>
+                <h3>Merci<h3>
+        </div>
+    </body>
+</html>
