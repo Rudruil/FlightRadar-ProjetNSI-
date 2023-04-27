@@ -45,7 +45,7 @@ class App(customtkinter.CTk):
                                                 command=self.on_closing)
         self.quitbutton.grid(pady=280, padx=60, column=9, row=2)
 
-        ##Partie Carte
+        ##Partie Carte -------------------------------------------------------------------------------------
         #creation de la partie de la fenetre dans la quel on met la carte
         self.frame_right = customtkinter.CTkFrame(master=self, corner_radius=0)
         self.frame_right.grid(row=0, column=1, rowspan=1, pady=0, padx=0, sticky="nsew")
@@ -86,7 +86,7 @@ class App(customtkinter.CTk):
         ## Connexion SQL + Affichage avion -----------------------------------------------------------------
 
     def set_marker_event(self):
-        #connexion pour test: self.connect = pymysql.connect(host="localhost", port=3306, user="robin-des-bois", passwd="cactus", database="tour_de_control")
+        #connexion à un base en localhost pour effectuer des test en attendant la base de données:
         self.connect = pymysql.connect(host="localhost", port=3306, user="robin-des-bois", passwd="cactus", database="tour_de_control")
         self.cursor  = self.connect.cursor()
         self.liste_avion = []
