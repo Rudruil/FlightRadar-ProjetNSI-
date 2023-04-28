@@ -87,7 +87,7 @@ class App(customtkinter.CTk):
 
     def set_marker_event(self):
         #connexion à un base en localhost pour effectuer des test en attendant la base de données:
-        self.connect = pymysql.connect(host="localhost", port=3306, user="robin-des-bois", passwd="cactus", database="tour_de_control")
+        self.connect = pymysql.connect(host="localhost", port=3306, user="root", database="tour_de_control")
         self.cursor  = self.connect.cursor()
         self.liste_avion = []
         for marker in self.marker_list:
